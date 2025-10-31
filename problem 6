@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int prod(int a) {
+
+    if (a==0) {
+        return 0;
+    } if (a<10) {
+        return a;
+    }
+    else {
+        return (a%10)*(int (a/10));
+    }
+}
+
+
+int main() {
+    int a;
+    cout << "Enter a number: ";
+    cin>>a;
+cout << prod(a) << endl;
+    return 0;
+}
