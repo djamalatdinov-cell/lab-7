@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int countZeros(int n) {
+    n = abs(n);
+    if (n == 0)
+    return 0;
+    int lastDigit = n % 10;
+
+    if (lastDigit == 0)
+    return 1 + countZeros(n / 10);
+    else
+    return countZeros(n / 10);
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+   if (n == 0)
+    cout << "Number of 0: 1" << endl;
+    else
+    cout << "Number of 0: " << countZeros(n) << endl;
+
+    return 0;
+}
